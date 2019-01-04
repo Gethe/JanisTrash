@@ -2,7 +2,7 @@ local _, ns = ...
 
 local HBDP = _G.LibStub("HereBeDragons-Pins-2.0")
 
-local ZANDALAR_ID = 1642
+local ZANDALAR_MAP_ID = 1642
 local introQuests = {
     Horde = {
         {quest = 47441, x = 1076.9038117188, y = -620.23978984375},
@@ -107,8 +107,8 @@ local function AddPin(pin)
         pin.icon = icon
     end
 
-    HBDP:AddWorldMapIconWorld(ns, icon.world, ZANDALAR_ID, pin.x, pin.y, 1)
-    HBDP:AddMinimapIconWorld(ns, icon.mini, ZANDALAR_ID, pin.x, pin.y, ShouldFloatOnEdge(pin))
+    HBDP:AddWorldMapIconWorld(ns, icon.world, ZANDALAR_MAP_ID, pin.x, pin.y, 1)
+    HBDP:AddMinimapIconWorld(ns, icon.mini, ZANDALAR_MAP_ID, pin.x, pin.y, ShouldFloatOnEdge(pin))
 end
 
 
