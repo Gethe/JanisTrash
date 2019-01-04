@@ -31,6 +31,7 @@ local pins = {
     {quest = 50883, x = 3491.7959662109, y = 2222.4461365234, item = 158910}, -- Charged Ranishu Antennae
 }
 
+
 local function onEnter(this)
     local text
     if this.pin.item then
@@ -66,6 +67,7 @@ local function CreateIcon(pin)
     return icon
 end
 
+
 local function SearchBagsForItem(itemID)
     for bagID = 0, _G.NUM_BAG_SLOTS do
         for slotIndex = 1, _G.GetContainerNumSlots(bagID) do
@@ -91,6 +93,7 @@ local function ShouldFloatOnEdge(pin)
 
     return floatOnEdge
 end
+
 
 local function AddPin(pin)
     local icon = pin.icon
@@ -124,6 +127,7 @@ local function IntroIsFinished()
     return true
 end
 
+
 local function UpdatePins(questID)
     HBDP:RemoveAllWorldMapIcons(ns)
     HBDP:RemoveAllMinimapIcons(ns)
@@ -138,11 +142,11 @@ local function UpdatePins(questID)
     end
 end
 
+
 local eventFrame = _G.CreateFrame("Frame")
 eventFrame:RegisterEvent("QUEST_REMOVED")
 eventFrame:RegisterEvent("BAG_UPDATE_DELAYED")
 eventFrame:SetScript("OnEvent", function(self, event, ...)
     UpdatePins(...)
 end)
-
 UpdatePins()
