@@ -1,8 +1,7 @@
-package-as: Aurora
-
 ignore:
     - *.sublime*
-    - test.lua
+    - icons.png
+    - icons.psd
 
 manual-changelog:
   filename: CHANGELOG.md
