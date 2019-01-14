@@ -2,6 +2,7 @@ local _, ns = ...
 
 local HBDP = _G.LibStub("HereBeDragons-Pins-2.0")
 
+-- https://www.wowhead.com/achievement=12482/get-hekd
 local ZANDALAR_MAP_ID = 1642
 local introQuests = {
     Horde = {
@@ -31,7 +32,7 @@ local pins = {
     {quest = 50883, x = 3491.7959662109, y = 2222.4461365234, item = 158910}, -- Charged Ranishu Antennae
 }
 
-
+local GameTooltip = _G.WorldMapTooltip or _G.GameTooltip
 local function onEnter(this)
     local text
     if this.pin.item then
@@ -40,12 +41,12 @@ local function onEnter(this)
         text = _G.C_QuestLog.GetQuestInfo(this.pin.quest)
     end
 
-    _G.WorldMapTooltip:SetOwner(this, "ANCHOR_CURSOR_RIGHT")
-    _G.WorldMapTooltip:SetText(text or "Loading...")
-    _G.WorldMapTooltip:Show()
+    GameTooltip:SetOwner(this, "ANCHOR_CURSOR_RIGHT")
+    GameTooltip:SetText(text or "Loading...")
+    GameTooltip:Show()
 end
 local function onLeave(this)
-    _G.WorldMapTooltip:Hide()
+    GameTooltip:Hide()
 end
 local function CreateIcon(pin)
     local icon = _G.CreateFrame("Frame")
