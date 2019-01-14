@@ -6,3 +6,8 @@ ignore:
 manual-changelog:
   filename: CHANGELOG.md
   markup-type: markdown
+
+externals:
+    Jani'sTrash/Libs/HereBeDragons:
+        url: https://repos.wowace.com/wow/herebedragons
+        tag: latest
