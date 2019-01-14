@@ -7,4 +7,5 @@
 ## X-Curse-Project-ID: 311369
 ## X-WoWI-ID: 24875
 
+Libs\Libs.xml
 code.lua
