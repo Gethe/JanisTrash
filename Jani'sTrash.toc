@@ -1,7 +1,7 @@
 ## Interface: 80100
 ## Title: Jani's Trash
 ## Author: Gethe
-## Version: 0.1
+## Version: 1.0.0
 ## OptionalDeps: HereBeDragons
 ## X-Website: http://www.wowinterface.com/downloads/info24875.html
 ## X-Curse-Project-ID: 311369
