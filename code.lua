@@ -56,7 +56,7 @@ local function CreateIcon(pin)
     icon.pin = pin
 
     local texture = icon:CreateTexture(nil, "ARTWORK")
-    texture:SetTexture([[Interface/AddOns/Jani's Trash/icons]])
+    texture:SetTexture([[Interface/AddOns/Jani'sTrash/icons]])
     texture:SetAllPoints()
 
     if pin.item then
