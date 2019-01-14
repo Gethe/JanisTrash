@@ -49,20 +49,20 @@ local function onLeave(this)
 end
 local function CreateIcon(pin)
     local icon = _G.CreateFrame("Frame")
-    icon:SetSize(16, 16)
+    icon:SetSize(32, 32)
     icon:SetScript("OnEnter", onEnter)
     icon:SetScript("OnLeave", onLeave)
     icon.pin = pin
 
     local texture = icon:CreateTexture(nil, "ARTWORK")
-    texture:SetTexture([[Interface/Icons/Buff_FelTreasures]])
-    texture:SetTexCoord(.08, .92, .08, .92)
+    texture:SetTexture([[Interface/AddOns/Jani's Trash/icons]])
     texture:SetAllPoints()
 
-    local iconBorder = icon:CreateTexture(nil, "BACKGROUND")
-    iconBorder:SetPoint("TOPLEFT", texture, -1, 1)
-    iconBorder:SetPoint("BOTTOMRIGHT", texture, 1, -1)
-    iconBorder:SetColorTexture(0, 0, 0)
+    if pin.item then
+        texture:SetTexCoord(0.5, 1.0, 0.0, 0.5)
+    else
+        texture:SetTexCoord(0.0, 0.5, 0.0, 0.5)
+    end
 
     return icon
 end
