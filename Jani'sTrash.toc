@@ -1,5 +1,10 @@
 ## Interface: 80100
 ## Title: Jani's Trash
+## Author: Gethe
+## Version: 0.1
 ## OptionalDeps: HereBeDragons
+## X-Website: http://www.wowinterface.com/downloads/info24875.html
+## X-Curse-Project-ID: 311369
+## X-WoWI-ID: 24875
 
 code.lua
