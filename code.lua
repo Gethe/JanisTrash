@@ -14,6 +14,12 @@ local introQuests = {
         {quest = 51145, x = 4227.5458607422, y = 2667.0752394531},
     }
 }
+local faction = _G.UnitFactionGroup("player")
+if not introQuests[faction] then
+    -- probably a low level Pandaren
+    return
+end
+
 local pins = {
     -- Zuldazar 862
     {quest = 50381, x = 465.7609890625, y = -1266.2106604492}, -- The Great Hat Robbery
@@ -113,11 +119,11 @@ local function AddPin(pin)
 end
 
 
-local faction, finished = introQuests[_G.UnitFactionGroup("player") or "Horde"], false
+local factionQuests, finished = introQuests[faction], false
 local function IntroIsFinished()
     if not finished then
-        for i=1, #faction do
-            local pin = faction[i]
+        for i = 1, #factionQuests do
+            local pin = factionQuests[i]
             if not _G.IsQuestFlaggedCompleted(pin.quest) then
                 AddPin(pin)
                 return false
