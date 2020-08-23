@@ -124,7 +124,7 @@ local function IntroIsFinished()
     if not finished then
         for i = 1, #factionQuests do
             local pin = factionQuests[i]
-            if not _G.IsQuestFlaggedCompleted(pin.quest) then
+            if not _G.C_QuestLog.IsQuestFlaggedCompleted(pin.quest) then
                 AddPin(pin)
                 return false
             end
@@ -142,7 +142,7 @@ local function UpdatePins(questID)
     if IntroIsFinished() then
         for i=1, #pins do
             local pin = pins[i]
-            if not _G.IsQuestFlaggedCompleted(pin.quest) then
+            if not _G.C_QuestLog.IsQuestFlaggedCompleted(pin.quest) then
                 AddPin(pin)
             end
         end
