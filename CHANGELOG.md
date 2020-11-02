@@ -1,4 +1,13 @@
-﻿## [1.0.2] - 2020-08-22 ##
+﻿## [1.0.3] - 2020-11-02 ##
+### Changed ###
+  * Updated for 9.0
+
+### Fixed ###
+  * Error when mousing over a quest type POI
+
+
+
+## [1.0.2] - 2020-08-22 ##
 ### Changed ###
   * Tweaked loot icon
 
@@ -20,6 +29,7 @@
   * Created AddOn
 
 [Unreleased]: https://github.com/Gethe/JanisTrash/compare/master...develop
+[1.0.3]: https://github.com/Gethe/JanisTrash/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/Gethe/JanisTrash/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/Gethe/JanisTrash/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/Gethe/JanisTrash/compare/9820df...1.0.0
