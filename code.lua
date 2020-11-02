@@ -44,7 +44,7 @@ local function onEnter(this)
     if this.pin.item then
         text = this.pin.item:GetItemName()
     else
-        text = _G.C_QuestLog.GetQuestInfo(this.pin.quest)
+        text = _G.C_QuestLog.GetTitleForQuestID(this.pin.quest)
     end
 
     GameTooltip:SetOwner(this, "ANCHOR_CURSOR_RIGHT")
